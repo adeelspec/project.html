@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Deforestation</title>
+      <link rel="stylesheet" href="deforestation_project.css">
+      <style>
+        #definition{
+  font-size: 20px;
+  font-family:"Arial Black", Gadget, sans-serif;
+  border-bottom: 5px solid #ad0da0;
+}
+#definition span{
+  font-size: 30px;
+  color:#6A0DAD;
+  text-shadow: 1px 1px #ad0da0;
+}
+h4{
+  font-family:"Arial Black", Gadget, sans-serif;
+  text-decoration: underline;
+  text-decoration-color: #ad0da0;
+}
+h2{
+  text-decoration: underline;
+  text-decoration-color: #ad0da0;
+  font-family:"Arial Black", Gadget, sans-serif;
+}
+p,li,label{
+  font-family: Tahoma, Geneva, sans-serif;
+}
+*{
+  background-color:#eee;
+}
+input{
+  border: 2px solid #999;
+  background-color: #ad0da015;
+  border-radius: 7px;
+}
+input:focus{
+  border: 2px solid #999;
+  background-color: #ad0da045;
+  outline:0;
+}
+button{
+  font-family:"Arial Black", Gadget, sans-serif;
+  border: 2px solid #ad0da0;
+  padding: .5px 5px;
+  transition-duration: 0.4s;
+  border-radius: 13px 13px;
+  outline:0;
+}
+button:hover{
+  background-color:#ad0da0;
+  color: #eee;
+}
+.imgsz{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+}
+      </style>
+      </head>
+      <body>
+        <div id="definition"><p><span>Deforestation</span> is the removal of trees in order to make room for things other than forests.</p></div>
+        <h4>Why do humans cut down forests?</h4>
+        <p>Deforestation allows for humans to make room for agriculture and grazing. The most common product of deforestation is wood used
+        as firewood and for the production of goods. Humans also convert forests into plantations, infastructure, settlements, and more.
+        One product that benefits from deforestation is palm oil, which is the most used vegetable oil found in lots of common products like like shampoo and lipstick, because native trees are killed to plant palm trees.
+        Forests are detroyed to make room for mines and the infastructure that they require.</p>
+        <img class="imgsz" src="https://i2.wp.com/redgreenandblue.org/wp-content/uploads/2017/10/deforestation_in_the_amazon.jpg.662x0_q70.jpg?w=662" alt="Picture of an empty forest">
+        <h4>How are humans destroying forests?</h4>
+        <p>Humans are destroying forests in numerous ways. Forest fires quickly remove forests along with biodiversity, the local climate, and
+        the economy. Human caused climate change dries out forests and then forest fires can have even more devestating effects. Humans logging
+        also destroys large chunks of forests.</p>
+        <img class="imgsz" src="https://www.worldatlas.com/r/w963-h562-c963x562/upload/b3/c3/8e/shutterstock-48032821.jpg" alt="Picture of a forest fire">
+        <h4>Why is deforestation so bad?</h4>
+        <p>Deforestation has numerous affects on both the biosphere and mankind. These include:
+        <ul>
+          <li>
+          Deforestation results in a lot less trees which can absorb CO<sub>2</sub> through photosynthesis and
+          this causes more CO<sub>2</sub> in to be in the atmosphere. Since CO<sub>2</sub> is a greenhouse gas, it traps heat and
+          warms up the Earth. Without deforestation, the effects of climate change could be less.
+          </li>
+          <li>Deforestation destroys habitat, which kills organisms, and leads to a decrease in biodiversity in trees, animals, and almost all other types of organisms.</li>
+          <li>
+              The forest watershed is the water trees absorb from rain and they take up ground water from the soil through their roots.
+              This controls the amount of runoff amd prevents flooding. With less trees, there will be more runoff, flooding, erosion, and
+               stored freshwater will disapate.
+          </li>
+          <li>
+              People who rely on gathering firewood have to travel further to get it. In countries, such as Uganda, where children are responsible
+              for gathering the firewood, the further hike means that they miss out on school.
+          </li>
+        </ul>
+        </p>
+        <h4>Solutions to deforestation</h4>
+        <ul>
+          <li>Farmers can use effective farming techniques that requre less space.</li>
+          <li>Governments can plant trees to restore the forest and reintroducing organisms to let the ecoysytem repair itself.</li>
+          <li>The California Deforestation-Free Procurement Act mandates that the state contractos cannot use materials
+              created from deforestation.</li>
+          <li>You can buy FSC certified products to make sure that they come from well managed forests.</li>
+          <li>You can avoid using palm oil products.</li>
+          <li>You can plant a tree.</li>
+          <li>You can try to minimize paper use.</li>
+        </ul>
+        <h2>How much paper is used at CHS in one school year?</h2>
+        <form onsubmit="return false;">
+          <label for="paperUseage">How many pages of paper do you use everyday?</label>
+          <input type="number" id="paperUseage" name="paperUseage" min="0">
+          <button type="button" id="go">Go</button>
+          <p id="output"></p>
+        </form>
+        <br><br><br><br>
+        <p>Sources: <br>sites.psu.edu/mfsblog/tag/deforestation/<br>pachamama.org/effects-of-deforestation
+        <br>livescience.com/27692-deforestation.html<br>wwf.panda.org/our_work/forests/deforestation_causes2/<br>leginfo.legislature.ca.gov/faces/billTextClient.xhtml?bill_id=201920200AB572<br>
+          Made by Burton Alexander 2020
+  </p>
+        <script src="deforestation_project.js">
+          var output = document.getElementById("output");
+document.getElementById("go").onclick = function(){
+  var paperPerPerson  = Math.abs(document.getElementById("paperUseage").value);
+  var treesUsed = paperPerPerson * 180 * 2000 / 30000;
+  var poundsOfCO2 = treesUsed*48;
+  output.innerHTML = "If every person in the school uses "+paperPerPerson+" pieces of paper everyday for a school year then "+treesUsed+" trees will be used and those trees getting cut down will result in "+poundsOfCO2+"lbs of CO<sub>2</sub> realesed into the atmosphere.";
+  window.scrollTo(0,window.scrollY+window.innerHeight*.9);
+}
+        </script>
+      </body>
+</html>
